@@ -1,1 +1,5 @@
 black
+pylint
+pytest
+click
+pytest-cov
