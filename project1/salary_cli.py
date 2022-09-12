@@ -13,7 +13,6 @@ def cli():
     """
     Salary cli
     """
-    pass
 
 
 @cli.command()
