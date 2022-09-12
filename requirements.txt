@@ -3,3 +3,8 @@ pylint
 pytest
 click
 pytest-cov
+ipython
+databricks
+databricks-cli
+databricks-sql-connector
+databricks-connect==10.4.*
