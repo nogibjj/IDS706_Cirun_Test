@@ -9,7 +9,7 @@ def get_connection():
     connection = MySQLdb.connect(
         host="rds-mysql.ccpbwcnz4url.us-east-2.rds.amazonaws.com",
         user="admin",
-        passwd="Qq13701377246",
+        passwd="",
         db="ids706")
     return connection
 
