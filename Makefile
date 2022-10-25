@@ -6,7 +6,7 @@ test:
 	python -m pytest -vv test_*.py
 
 format:	
-	black *.py project1/*.py project2/*.py
+	black *.py project1/*.py project2/*.py project3/*.py
 
 lint:
 	pylint --disable=R,C --ignore-patterns=test_.*?py *.py project1/*.py project2/*.py
