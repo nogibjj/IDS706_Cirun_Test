@@ -2,6 +2,8 @@
 """
 Project 3
 
+https://github.com/nogibjj/IDS706_Cirun_Test
+
 # mysql -h rds-mysql.ccpbwcnz4url.us-east-2.rds.amazonaws.com -P 3306 -u admin -p
 
 +-------------+---------------+------+-----+---------+-------+
@@ -33,6 +35,7 @@ def cli():
 
 def get_connection():
     """Returns a connection to the database"""
+    print(os.environ["DB_PASS"])
     connection = MySQLdb.connect(
         host="rds-mysql.ccpbwcnz4url.us-east-2.rds.amazonaws.com",
         user="admin",
