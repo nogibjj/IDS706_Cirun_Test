@@ -26,7 +26,13 @@ def get_top_n_best_courses(n, subject):
         params=payload,
         timeout=5,
     )
-    print(response.text)
+
+    for i in range(len(response.json()['id'])):
+        print(response.json()["id"][i])
+        print(response.json()["title"][i])
+        print(response.json()["subject"][i])
+        print(response.json()["rating"][i])
+        print("--------------------------")
 
 
 if __name__ == "__main__":
