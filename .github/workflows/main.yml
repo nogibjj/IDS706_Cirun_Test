@@ -34,6 +34,6 @@ jobs:
         aws-region: us-east-1
     - name: Deploy lambda
       run: |
-        cd project3/lambda
+        cd project4/lambda
         zip -j deploy.zip lambda_function.py 
         aws lambda update-function-code --function-name=Proj4Lambda --zip-file=fileb://deploy.zip
