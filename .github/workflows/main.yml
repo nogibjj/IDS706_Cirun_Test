@@ -26,3 +26,14 @@ jobs:
     - name: Format code
       run: |
         make format
+    - name: Configure AWS Credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: us-east-1
+    - name: Deploy lambda
+      run: |
+        cd project3/lambda
+        zip -j deploy.zip lambda_function.py 
+        aws lambda update-function-code --function-name=Proj4Lambda --zip-file=fileb://deploy.zip
