@@ -4,8 +4,8 @@ import MySQLdb
 def lambda_handler(event, context):
     # TODO implement
     print('ok')
-    n = event['multiValueQueryStringParameters']['n']
-    subject = event['multiValueQueryStringParameters']['subject']
+    n = event['queryStringParameters']['n']
+    subject = event['queryStringParameters']['subject']
     data = get_top_n_best_courses(int(n), subject)
     print(data)
     return {
