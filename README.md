@@ -29,3 +29,7 @@ Project 3 aims to generate a script that queries a database. In this project I c
 +-------------+---------------+------+-----+---------+-------+
 ```
 The database stores the information of coursera course. Then I build a script `db.py`, it queries the database with SQL and MySQLdb API. I also made it as a command line tool with Click. It retireve the info for a specific course or top N best courses.
+
+# Project 4
+
+Project 4 is a further step of project 3. It created a REST API to query the database, and build the continuous delivery pipeline with github actions. The REST API was created using AWS Lambda and AWS API Gateway, it will parse the input instruction and query the MySQL database. Then I modified the `main.yaml`, when the new change is pushed to the repo, github actions will also be triggered and push the change to AWS, thus it can automatically update the API.
